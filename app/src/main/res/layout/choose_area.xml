@@ -3,12 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF">
-    <!-- ¶¨ÒåÍ·²¼¾Ö -->
+    <!-- å®šä¹‰å¤´å¸ƒå±€ -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary">
-        <!-- ÏÔÊ¾±êÌâÄÚÈÝ -->
+        <!-- æ˜¾ç¤ºæ ‡é¢˜å†…å®¹ -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
             android:layout_centerInParent="true"
             android:textColor="#FFF"
             android:textSize="20sp"/>
-        <!-- Ö´ÐÐ·µ»Ø²Ù×÷µÄ°´Å¥ -->
+        <!-- æ‰§è¡Œè¿”å›žæ“ä½œçš„æŒ‰é’® -->
         <Button
             android:layout_width="25dp"
             android:layout_height="25dp"
@@ -26,7 +26,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
-    <!-- ÏÔÊ¾Ê¡ÊÐÏØµÄÊý¾Ý -->
+    <!-- æ˜¾ç¤ºçœå¸‚åŽ¿çš„æ•°æ® -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-﻿package com.coolweather.android;
+package com.coolweather.android;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -28,7 +28,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 

@@ -9,22 +9,21 @@ import com.coolweather.android.db.Province;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 public class Utility {
     /**
-     * ½âÎöºÍ´¦Àí·şÎñÆ÷·µ»ØµÄÊ¡¼¶Êı¾İ
+     * è§£æå’Œå¤„ç†æœåŠ¡å™¨è¿”å›çš„çœçº§æ•°æ®
      */
     public static boolean handleProvinceResponse(String response) {
-        if (!TextUtils.isEmpty(response)) {  // Êı¾İ·Ç¿Õ
+        if (!TextUtils.isEmpty(response)) {  // æ•°æ®éç©º
             try {
-                JSONArray allProvinces = new JSONArray(response);   // ´´½¨Ò»¸öÓÃÓÚ½âÎöµÄ JSON Êı×é
+                JSONArray allProvinces = new JSONArray(response);   // åˆ›å»ºä¸€ä¸ªç”¨äºè§£æçš„ JSON æ•°ç»„
                 for (int i = 0; i < allProvinces.length(); i++) {
-                    JSONObject provinceObject = allProvinces.getJSONObject(i);  // »ñÈ¡Ã¿Ò»¸ö JSON ¶ÔÏó
+                    JSONObject provinceObject = allProvinces.getJSONObject(i);  // è·å–æ¯ä¸€ä¸ª JSON å¯¹è±¡
                     Province province = new Province();
-                    province.setProvinceName(provinceObject.getString("name")); // ½« JSON ¶ÔÏóÖĞµÄ name ×Ö¶Î¸³¸ø ProvinceName
-                    province.setProvinceCode(provinceObject.getInt("id"));  // ½« JSON ¶ÔÏóÖĞµÄ id ×Ö¶Î¸³¸ø ProvinceCode
-                    province.save(); // ½«Êı¾İ´æµ½Êı¾İ¿âÖĞ
+                    province.setProvinceName(provinceObject.getString("name")); // å°† JSON å¯¹è±¡ä¸­çš„ name å­—æ®µèµ‹ç»™ ProvinceName
+                    province.setProvinceCode(provinceObject.getInt("id"));  // å°† JSON å¯¹è±¡ä¸­çš„ id å­—æ®µèµ‹ç»™ ProvinceCode
+                    province.save(); // å°†æ•°æ®å­˜åˆ°æ•°æ®åº“ä¸­
                 }
                 return true;
             } catch (JSONException e) {
@@ -34,7 +33,7 @@ public class Utility {
         return false;
     }
     /**
-     * ½âÎöºÍ´¦Àí·şÎñÆ÷·µ»ØµÄÊĞ¼¶Êı¾İ
+     * è§£æå’Œå¤„ç†æœåŠ¡å™¨è¿”å›çš„å¸‚çº§æ•°æ®
      */
     public static boolean handleCityResponse(String response, int provinceId) {
         if (!TextUtils.isEmpty(response)) {
@@ -56,7 +55,7 @@ public class Utility {
         return false;
     }
     /**
-     * ½âÎöºÍ´¦Àí·şÎñÆ÷·µ»ØµÄÏØ¼¶Êı¾İ
+     * è§£æå’Œå¤„ç†æœåŠ¡å™¨è¿”å›çš„å¿çº§æ•°æ®
      */
     public static boolean handleCountyResponse(String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
