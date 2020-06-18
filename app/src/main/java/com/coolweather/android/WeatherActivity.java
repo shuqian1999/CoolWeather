@@ -73,6 +73,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_weather);
+
         //初始化各组件
         swipeRefreshLayout = findViewById(R.id.swipe_refresh);
         swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);   // 设置下拉刷新进度条的颜色
@@ -167,6 +168,7 @@ public class WeatherActivity extends AppCompatActivity {
         });
         loadBingPic();
     }
+
     /**
      * 处理并展示Weather实体类中的数据
      * @param weather
@@ -213,6 +215,7 @@ public class WeatherActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AutoUpdateService.class);
         startService(intent);
     }
+
     /**
      * 加载必应每日一图
      */

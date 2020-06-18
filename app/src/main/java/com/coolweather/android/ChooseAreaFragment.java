@@ -33,12 +33,14 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class ChooseAreaFragment extends Fragment {
+
     /**
      * 宏定义试图的不同级别
      */
     public static final int LEVEL_PROVINCE = 0;
     public static final int LEVEL_CITY = 1;
     public static final int LEVEL_COUNTY = 2;
+
     /**
      * 准备一些控件
      */
@@ -48,16 +50,20 @@ public class ChooseAreaFragment extends Fragment {
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private List<String> dataList = new ArrayList<>();
+
     /**
      * 省、市、县的列表
      */
     private List<Province> provinceList;
     private List<City> cityList;
     private List<County> countyList;
+
     // 选中的省
     private Province selectedProvince;
+
     // 选中的市
     private City selectedCity;
+
     // 当前选中的级别
     private int currentLevel;
     @Nullable

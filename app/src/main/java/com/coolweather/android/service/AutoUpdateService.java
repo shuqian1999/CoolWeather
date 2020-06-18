@@ -33,6 +33,7 @@ public class AutoUpdateService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         updateWeather();    // 更新天气
         updateBingPic();    // 更新背景图片
+
         //定时任务
         AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
         int anHour = 60 * 60 * 1000; // 1 小时
@@ -43,6 +44,7 @@ public class AutoUpdateService extends Service {
         manager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,triggerAtTime,pi);
         return super.onStartCommand(intent,flags,startId);
     }
+
     /**
      * 更新天气信息
      */
@@ -75,6 +77,7 @@ public class AutoUpdateService extends Service {
             });
         }
     }
+
     /**
      * 更行必应每日一图
      */
